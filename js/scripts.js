@@ -1,5 +1,5 @@
 function responsiveNav() {
-    var x = document.getElementsById("top_nav");
+    var x = document.getElementsById("myTopnav");
     if (x.className === "top_nav") {
         x.className += " responsive";
     } else {
