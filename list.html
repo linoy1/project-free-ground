@@ -16,12 +16,11 @@
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <header >
-        <a href="index.html"><img src="images/logo.JPG" id="logo"></a>
+        <a href="index.html" id="logo"></a>
     </header>
     <div class="topnav" id="myTopnav">
         <nav>
@@ -37,24 +36,23 @@
     </div>
     <div id="wrapper">
         <main>
-            
             <h2 id="headline"> חיפוש מגרש </h2>
-            <span id="sort">
-                <label>מיין לפי</label>
-                <select id="sort-value">
-                    <option>מרחק</option>
-                    <option>דירוג</option>
-                    <option>פופולריות</option>
-                </select>    
-            </span>
-            <div id="myBtnContainer">
+            <section id="myBtnContainer">
                 <!-- material-icons md-inactive md-32 -->
                 <button class="btn active material-icons md-32" onclick="filterSelection('all')">הכל</button>
                 <button class="btn md-inactive material-icons md-32 " onclick="filterSelection('soccer')"> sports_soccer</button>
                 <button class="btn md-inactive material-icons md-32 " onclick="filterSelection('basketball')"> sports_basketball</button>
                 <button class="btn md-inactive material-icons md-32 " onclick="filterSelection('tennis')"> sports_tennis</button>
                 <button class="btn md-inactive material-icons md-32 " onclick="filterSelection('fitness')"> fitness_center</button>
-            </div>
+            </section>
+            <section id="sort">
+                <label>מיין לפי</label>
+                <select id="sort-value">
+                    <option>מרחק</option>
+                    <option>דירוג</option>
+                    <option>פופולריות</option>
+                </select>    
+            </section>
             <section class="groundsList">
                 <div class="filterDiv soccer basketball tennis">
                     <a href="object.html">
