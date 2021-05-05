@@ -357,6 +357,11 @@ tr:nth-child(even) {
     margin: 0 auto;
     background-color: #efefef;
     font-size: 30px;
+    width: 500px;
+}
+
+.new_ground h1 {
+    font-size: 40px;
 }
 
 

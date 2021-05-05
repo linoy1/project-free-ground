@@ -33,6 +33,7 @@
     </div>
     <div id="wrapper">
         <section class="new_ground">
+            <h1>המגרש הוסף בהצלחה!</h1>
             שם המגרש:<?php echo $_GET["groundName"];?>
             <br><br>
             כתובת:<?php echo $_GET["address"];?>
