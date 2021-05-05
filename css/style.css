@@ -58,9 +58,10 @@ header {
     background-image: url("../images/logo.jpg");
     background-repeat: no-repeat;
     /* background-size: contain; */
-    height: 100px;
+    height: 150px;
     width: 1000px;
     margin: 0 auto;
+    margin-right: 35%;
     display: block;
     margin-top: 30px;
 }
