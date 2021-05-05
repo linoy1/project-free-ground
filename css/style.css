@@ -39,6 +39,10 @@ body {
     color: #000000;
 }
 
+.main_menu a:hover {
+    background-color: rgb(97, 94, 94);
+}
+
 .main_menu img {
     margin: 0 auto;
     margin-top: 50px;
