@@ -148,7 +148,6 @@ main {
   .show {
     display: block;
   }
-  
   /* Style the buttons */
   .btn {
     border: none;
@@ -165,7 +164,7 @@ main {
   }
   
   /* Add a dark background to the active button */
-  .btn:target {
+  .active ,  .active:hover{
     background-color: #666;
     color: white;
   }
