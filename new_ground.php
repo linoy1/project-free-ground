@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl" lang="ar">
 
-<meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free-Ground</title>
@@ -15,13 +16,15 @@
 
 </head>
 
-<body>
+<body>    
+
+
     <header>
-        <a href="index.html" id="logo"></a>
+        <a href="index.html"  id="logo"></a>
     </header>
     <div class="topnav" id="myTopnav">
         <nav>
-            <a href="#">עמוד בית</a>
+            <a href="index.html">עמוד בית</a>
             <a href="add_ground.html">הוסף מגרש</a>
             <a href="list.html">חיפוש מגרש</a>
             <a href="#">הגדרות</a>
@@ -32,6 +35,8 @@
         </nav>
     </div>
     <div id="wrapper">
+        <section class="new_ground">
+            <h1>המגרש נוסף בהצלחה!</h1>
             שם המגרש:<?php echo $_GET["groundName"];?>
             <br><br>
             כתובת:<?php echo $_GET["address"];?>
@@ -43,6 +48,7 @@
             מגרשי טניס:<?php echo $_GET["tennis"];?>
             <br><br>
             מתקני כושר:<?php echo $_GET["fitness"];?>
-    </div>
+            </section>
+        </div>
     </body>
 </html>
