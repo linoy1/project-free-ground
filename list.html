@@ -8,6 +8,7 @@
     <title>Free-Ground</title>
     <link rel="stylesheet" href="css/style.css" media="screen">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
     <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap" rel="stylesheet">
@@ -46,13 +47,16 @@
                     <option>פופולריות</option>
                 </select>    
             </span>
-            <span id="filter">
-                <button><span class="material-icons md-inactive md-48">sports_soccer</span></button>
-                <button><span class="material-icons md-inactive md-48">sports_basketball</span></button>
-                <button><span class="material-icons md-inactive md-48">sports_tennis</span></button>
-                <button><span class="material-icons md-inactive md-48">fitness_center</span></button>
-            </span>
+            <div id="myBtnContainer">
+                <!-- material-icons md-inactive md-32 -->
+                <button class="btn active material-icons md-32" onclick="filterSelection('all')">הכל</button>
+                <button class="btn md-inactive material-icons md-32 " onclick="filterSelection('soccer')"> sports_soccer</button>
+                <button class="btn md-inactive material-icons md-32 " onclick="filterSelection('basketball')"> sports_basketball</button>
+                <button class="btn md-inactive material-icons md-32 " onclick="filterSelection('tennis')"> sports_tennis</button>
+                <button class="btn md-inactive material-icons md-32 " onclick="filterSelection('fitness')"> fitness_center</button>
+            </div>
             <section class="groundsList">
+                <div class="filterDiv soccer basketball tennis">
                     <a href="object.html">
                         <h4>אפקה-מגרש מרכזי &nbsp;&nbsp; 234m</h4>
                         <span id="icons">
@@ -66,6 +70,8 @@
                             <span class="material-icons md-24">sports_tennis</span>
                         </span>
                     </a>
+                </div>
+                <div class="filterDiv soccer basketball">
                     <a href="#">
                         <h4>אפקה-ביה"ס אופק &nbsp;&nbsp; 234m</h4>
                         <span id="icons">
@@ -77,6 +83,8 @@
                             <span class="material-icons md-24">sports_basketball</span>
                         </span>
                     </a>
+                </div>
+                <div class="filterDiv soccer basketball">
                     <a href="#">
                         <h4>תיכון עמל 1 &nbsp;&nbsp;&nbsp; 234m</h4>
                         <span id="icons">
@@ -88,6 +96,8 @@
                             <span class="material-icons md-24">sports_basketball</span>
                         </span>
                     </a>
+                </div>
+                <div class="filterDiv soccer">
                     <a href="#">
                         <h4>אפקה מגרש סינטטי &nbsp;&nbsp; 234m</h4>
                         <span id="icons">
@@ -97,6 +107,7 @@
                             <span class="material-icons md-24">sports_soccer</span>
                         </span>
                     </a>
+                </div>
             </section>
         </main>
     </div>
