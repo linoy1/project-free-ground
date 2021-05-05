@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free-Ground</title>
     <link rel="stylesheet" href="css/style.css" media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/scripts.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
     <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"> -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -19,23 +20,26 @@
     <header>
         <a href="index.html" id="logo"></a>
     </header>
-    <div class="top_nav" id="myTopnav">
+    <div class="topnav" id="myTopnav">
         <nav>
             <a href="#">עמוד בית</a>
             <a href="#">הוסף מגרש</a>
-            <a href="#">חיפוש מגרש</a>
+            <a href="list.html">חיפוש מגרש</a>
             <a href="#">הגדרות</a>
             <a href="#">התנתק</a>
             <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-
-                <i class="fa fa-bars"></i></a>
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
     </div>
     <div id="wrapper">
         <main id="object_page">
 
             <h2> אפקה-מגרש מרכזי</h2>
-            <h1>234m</h1>
+            <span id="show-on-map">
+                <button><img src="images/Google_Maps_icon_(2015-2020).svg" id="map-img"></button>      
+                <span id="dis">234m</span>
+                </span>
             <section class="rate_star">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -43,6 +47,8 @@
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
             </section>
+
+
 
 
 
