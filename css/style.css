@@ -136,39 +136,50 @@ main {
     font-size: 20px;
 }
 
-#myBtnContainer{
+#myBtnContainer {
     margin-top: 20px;
     margin-right: 32%;
 }
+
 .filterDiv {
-    display: none; /* Hidden by default */
-  }
-  
-  /* The "show" class is added to the filtered elements */
-  .show {
+    display: none;
+    /* Hidden by default */
+}
+
+
+/* The "show" class is added to the filtered elements */
+
+.show {
     display: block;
-  }
-  
-  /* Style the buttons */
-  .btn {
+}
+
+
+/* Style the buttons */
+
+.btn {
     border: none;
     border-radius: 20%;
     outline: none;
     padding: 12px 16px;
     background-color: #f1f1f1;
     cursor: pointer;
-  }
-  
-  /* Add a light grey background on mouse-over */
-  .btn:hover {
+}
+
+
+/* Add a light grey background on mouse-over */
+
+.btn:hover {
     background-color: #ddd;
-  }
-  
-  /* Add a dark background to the active button */
-  .btn:target {
+}
+
+
+/* Add a dark background to the active button */
+
+.btn:target {
     background-color: #666;
     color: white;
-  }
+}
+
 .groundsList a {
     /* background-image: url("https://www.ramotalon.org.il/productImages2/114/2020/09/03/image1599144990.jpg"); */
     background-size: 150px 100px;
@@ -228,15 +239,14 @@ footer {
     background-color: #333;
 }
 
-
-#form{
-    
+#form {
     font-family: 'Karantina', cursive;
 }
 
-#submit{
+#submit {
     width: 100%;
 }
+
 
 /* object */
 
@@ -304,15 +314,42 @@ tr:nth-child(even) {
     background-color: #efefef;
 }
 
-.material-icons.md-18 {font-size: 18px;}
-.material-icons.md-24 {font-size: 24px;}
-.material-icons.md-36 {font-size: 36px;}
-.material-icons.md-48 {font-size: 48px;}
-.material-icons-two-tone.md-18 {font-size: 18px;}
-.material-icons-two-tone.md-24 {font-size: 24px;}
-.material-icons-two-tone.md-36 {font-size: 36px;}
-.material-icons-two-tone.md-48 {font-size: 48px;}
-.material-icons.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.material-icons-two-tone.md-18 {
+    font-size: 18px;
+}
+
+.material-icons-two-tone.md-24 {
+    font-size: 24px;
+}
+
+.material-icons-two-tone.md-36 {
+    font-size: 36px;
+}
+
+.material-icons-two-tone.md-48 {
+    font-size: 48px;
+}
+
+.material-icons.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
 
 /* media query */
 
