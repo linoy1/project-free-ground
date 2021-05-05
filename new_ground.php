@@ -32,6 +32,7 @@
         </nav>
     </div>
     <div id="wrapper">
+        <section class="new_ground">
             שם המגרש:<?php echo $_GET["groundName"];?>
             <br><br>
             כתובת:<?php echo $_GET["address"];?>
@@ -43,6 +44,7 @@
             מגרשי טניס:<?php echo $_GET["tennis"];?>
             <br><br>
             מתקני כושר:<?php echo $_GET["fitness"];?>
-    </div>
+            </section>
+        </div>
     </body>
 </html>

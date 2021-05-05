@@ -351,6 +351,15 @@ tr:nth-child(even) {
 }
 
 
+/* new_ground */
+
+.new_ground {
+    margin: 0 auto;
+    background-color: #efefef;
+    font-size: 30px;
+}
+
+
 /* media query */
 
 @media only screen and (max-width:600px) {
