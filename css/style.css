@@ -50,20 +50,81 @@ body {
 }
 
 header {
-    width: 1000px;
-    height: 150px;
+    width: 100%;
+    padding-left: 20px;
+}
+
+header ul {
+    font-size: 10px;
+    list-style-type: none;
+}
+
+header li {
+    display: inline;
+    color: #3a3f40;
+    padding-left: 10px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: inherit;
 }
 
 #logo {
     background-image: url("../images/logo.jpg");
     background-repeat: no-repeat;
-    /* background-size: contain; */
-    height: 100px;
-    width: 1000px;
+    height: 50px;
+    width: 300px;
     margin: 0 auto;
     display: block;
-    margin-top: 30px;
+    float: right;
 }
+
+
+/* ------------------ */
+
+.example {
+    float: left;
+    width: 200px;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    width: 80%;
+    font-size: 15px;
+    border: 1px solid grey;
+    background: #f1f1f1;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 1px;
+    color: white;
+    background-color: #333;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border: none;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+form.example button:hover {
+    background-color: #ddd;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* ------------ */
 
 #wrapper {
     width: 1000px;
@@ -129,7 +190,7 @@ main {
 #sort {
     font-size: 26px;
     margin-top: 20px;
-    margin-right: 38%;
+    margin-left: 410px;
 }
 
 #sort-value {
@@ -139,7 +200,7 @@ main {
 
 #myBtnContainer {
     margin-top: 20px;
-    margin-right: 32%;
+    margin-left: 400px;
 }
 
 .filterDiv {
@@ -181,6 +242,10 @@ main {
     color: white;
 }
 
+.groundsList {
+    height: 700px;
+}
+
 .groundsList a {
     /* background-image: url("https://www.ramotalon.org.il/productImages2/114/2020/09/03/image1599144990.jpg"); */
     background-size: 150px 100px;
@@ -218,6 +283,17 @@ main {
     margin-top: 5%;
 }
 
+.bg-light {
+    clear: both;
+    position: relative;
+    margin-top: 200px;
+}
+
+.container a {
+    border: none;
+    ;
+}
+
 #icons,
 #small-icons {
     float: left;
@@ -236,9 +312,16 @@ main {
     display: none;
 }
 
-footer {
-    height: 30px;
-    background-color: #333;
+i.fa {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 0.5em 0.6em;
+}
+
+.blackLine {
+    background-color: #797474;
+    height: 1px;
+    width: 100%;
 }
 
 #form {
@@ -386,6 +469,15 @@ tr:nth-child(even) {
     header {
         display: none;
     }
+    header ul {
+        display: none;
+    }
+    #logo {
+        display: none;
+    }
+    .example {
+        display: none;
+    }
     /* index.html */
     #indexPage .topnav {
         height: 46px;
@@ -505,7 +597,7 @@ tr:nth-child(even) {
         background-color: #dddddd;
     }
     /* footer */
-    footer {
+    .bg-light {
         display: none;
     }
 }
