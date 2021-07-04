@@ -8,26 +8,21 @@
     <title>Free-Ground</title>
     <link rel="stylesheet" href="css/style.css" media="screen">
     <script src="js/scripts.js"></script>
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
     <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"> -->
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>    
-
-
+<body>
     <header>
         <a href="index.html"  id="logo"></a>
     </header>
     <div class="topnav" id="myTopnav">
         <nav>
-            <a href="index.html">עמוד בית</a>
-            <a href="add_ground.html">הוסף מגרש</a>
-            <a href="list.html">חיפוש מגרש</a>
-            <a href="#">הגדרות</a>
+            <a href="index.php">עמוד בית</a>
+            <a href="find_ground.php">חיפוש מגרש</a>
+            <a href="my_grounds.php">המגרשים שלי</a>
+            <a href="my_matches.php">המשחקים שלי</a>
+            <a href="settings.php">הגדרות</a>
             <a href="#">התנתק</a>
             <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                 <i class="fa fa-bars"></i>

@@ -18,20 +18,21 @@
 
     <body>    
         <header >
-            <a href="index.html" id="logo"></a>
+            <a href="index.php" id="logo"></a>
         </header>
         <div class="topnav" id="myTopnav">
-            <nav>
-            <a href="index.html">עמוד בית</a>
-                <a href="#">הוסף מגרש</a>
-                <a href="list.html">חיפוש מגרש</a>
-                <a href="#">הגדרות</a>
-                <a href="#">התנתק</a>
-                <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </nav>
-        </div>
+        <nav>
+            <a href="index.php">עמוד בית</a>
+            <a href="find_ground.php">חיפוש מגרש</a>
+            <a href="my_grounds.php">המגרשים שלי</a>
+            <a href="my_matches.php">המשחקים שלי</a>
+            <a href="settings.php">הגדרות</a>
+            <a href="#">התנתק</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </div>
       <div id="wrapper">      
     
             <h2 id="headline"> הוסף מגרש</h2>

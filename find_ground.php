@@ -56,7 +56,7 @@
             </section>
             <section class="groundsList">
                 <div class="filterDiv soccer basketball tennis">
-                    <a href="object.html">
+                    <a href="object.html?1">
                         <h4>אפקה-מגרש מרכזי &nbsp;&nbsp; 100m</h4>
                         <span id="icons">
                             <span class="material-icons md-48">sports_soccer</span>
