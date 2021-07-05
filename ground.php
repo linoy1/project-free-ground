@@ -8,45 +8,21 @@
     <title>Free-Ground</title>
     <link rel="stylesheet" href="css/style.css" media="screen">
     <script src="js/scripts.js"></script>
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
     <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"> -->
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>    
-
-
- <header>
-        <ul>
-            <li> <a href="#">התחבר</a>
-            </li>
-            <li> <a href="#">צור קשר</a>
-            </li>
-            <li> <a href="#">עזרה</a>
-            </li>
-        </ul>
-        <a href="index.html" id="logo"></a>
-
-        <form class="example" action="#">
-            <button type="submit"><i class="fa fa-search"></i></button>
-            <input type="text" placeholder="חיפוש" name="search2">
-        </form>
+<body>
+    <header>
+        <a href="index.html"  id="logo"></a>
     </header>
     <div class="topnav" id="myTopnav">
         <nav>
-            <a href="index.html">עמוד בית</a>
-            <a href="add_ground.html">הוסף מגרש</a>
-            <a href="list.html">חיפוש מגרש</a>
-            <a href="#">הגדרות</a>
+            <a href="index.php">עמוד בית</a>
+            <a href="find_ground.php">חיפוש מגרש</a>
+            <a href="my_grounds.php">המגרשים שלי</a>
+            <a href="my_matches.php">המשחקים שלי</a>
+            <a href="settings.php">הגדרות</a>
             <a href="#">התנתק</a>
             <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                 <i class="fa fa-bars"></i>

@@ -19,46 +19,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <title>הוסף מגרש</title>
-</head>
-
-<body>
-    <header>
-        <ul>
-            <li> <a href="#">התחבר</a>
-            </li>
-            <li> <a href="#">צור קשר</a>
-            </li>
-            <li> <a href="#">עזרה</a>
-            </li>
-        </ul>
-        <a href="index.html" id="logo"></a>
-
-        <form class="example" action="#">
-            <button type="submit"><i class="fa fa-search"></i></button>
-            <input type="text" placeholder="חיפוש" name="search2">
-        </form>
-    </header>
-    <div class="topnav" id="myTopnav">
+<<<<<<< HEAD:add_ground.php
+    <body>    
+        <header >
+            <a href="index.php" id="logo"></a>
+        </header>
+        <div class="topnav" id="myTopnav">
         <nav>
-            <a href="index.html">עמוד בית</a>
-            <a href="#">הוסף מגרש</a>
-            <a href="list.html">חיפוש מגרש</a>
-            <a href="#">הגדרות</a>
-            <a href="#">התנתק</a>
+            <a href="index.php">עמוד בית</a>
+            <a href="find_ground.php">חיפוש מגרש</a>
+            <a href="my_grounds.php">המגרשים שלי</a>
+            <a href="my_matches.php">המשחקים שלי</a>
+            <a href="settings.php">הגדרות</a><a href="#">התנתק</a>
             <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
     </div>
-    <div id="wrapper">
-
-        <h2 id="headline"> הוסף מגרש</h2>
-        <form id="form" action="new_ground.php" method="GET">
-            <div class="mb-3 row">
-                <label for="groundName" class="col-sm-2 col-form-label fs-3">שם המגרש</label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control fs-5" name="groundName" id="groundName">
+      <div id="wrapper">      
+    
+            <h2 id="headline"> הוסף מגרש</h2>
+            <form id="form" action="new_ground.php" method="GET">
+                <div class="mb-3 row">
+                    <label for="groundName" class="col-sm-2 col-form-label fs-3">שם המגרש</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control fs-
                 </div>
             </div>
             <div class="mb-3 row">
