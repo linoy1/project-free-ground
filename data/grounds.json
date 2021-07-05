@@ -1,0 +1,49 @@
+{
+    "category": "Grounds",
+    "products": [{
+            "id": "1",
+            "name": "אפקה",
+            "address": "השלום 1 תל אביב",
+            "football": true,
+            "basketball": true,
+            "tennis": false,
+            "gym": true
+        },
+        {
+            "id": "2",
+            "name": "הרצוג",
+            "address": "סוקולוב 8 חולון",
+            "football": true,
+            "basketball": true,
+            "tennis": false,
+            "gym": false
+        },
+        {
+            "id": "3",
+            "name": "ספורטק",
+            "address": "הלחי 7 גבעתיים",
+            "football": true,
+            "basketball": false,
+            "tennis": true,
+            "gym": true
+        },
+        {
+            "id": "4",
+            "name": "ספורטק לוד",
+            "address": "האצל 5 לוד",
+            "football": true,
+            "basketball": true,
+            "tennis": true,
+            "gym": true
+        },
+        {
+            "id": "5",
+            "name": "הפועל",
+            "address": "ההסתדרות 7 חולון",
+            "football": false,
+            "basketball": true,
+            "tennis": true,
+            "gym": false
+        }
+    ]
+}
