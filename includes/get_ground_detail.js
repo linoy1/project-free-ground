@@ -1,4 +1,4 @@
-var groundName, groundAdress, groundFootball, groundBasketball, groundTennis, groundGym;
+var groundName, groundAddress, groundFootball, groundBasketball, groundTennis, groundGym;
 
 function getGroundId() {
     var akeyValue = window.location.search.substring(1).split('&'),
@@ -12,7 +12,7 @@ $(document).ready(function() {
         $.each(data.products, function(u, obj) {
             if (obj.id == groundId) {
                 groundName = obj.name;
-                groundAdress = obj.address;
+                groundAddress = obj.address;
                 groundFootball = obj.football;
                 groundBasketball = obj.basketball;
                 groundTennis = obj.tennis;
@@ -20,8 +20,10 @@ $(document).ready(function() {
             }
         });
         $('h1').html(groundName);
-        $('#groundAdress').html(groundAdress);
-        $('#groundFotball').html(groundFootball);
+        $('#groundAddress').html(groundAddress);
+        if(groundFootball == true){
+            $('#groundFootball').html('<span class="material-icons md-48>sports_soccer"</span>');
+        }
         $('#groundBasketball').html(groundBasketball);
         $('#groundTennis').html(groundTennis);
         $('#groundGym').html(groundGym);
