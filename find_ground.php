@@ -75,7 +75,7 @@
             <li> <a href="#">עזרה</a>
             </li>
         </ul>
-        <a href="index.html" id="logo"></a>
+        <a href="index.html" id="logo" alt="logo"></a>
 
         <form class="example" action="#">
             <button type="submit"><i class="fa fa-search"></i></button>

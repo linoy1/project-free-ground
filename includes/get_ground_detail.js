@@ -5,6 +5,13 @@ function getGroundId() {
         groundId = akeyValue[0].split("=")[1];
     return groundId;
 }
+// "id": "1",
+// "name": "אפקה",
+// "address": "השלום 1 תל אביב",
+// "football": true,
+// "basketball": true,
+// "tennis": false,
+// "gym": true
 $(document).ready(function() {
     $.getJSON('data/grounds.json', function(data) {
         var groundId = getGroundId();
