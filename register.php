@@ -2,20 +2,20 @@
 <?php 
     include "db.php";
     include "config.php";
-    if(!empty($_POST["loginMail"])) { // true if form was submitted
-        $query  = "INSERT INTO tbl_users_200 (fname,lname,email,password)
-        VALUES ('.$_POST["fname"].','.$_POST["lname"].','.$_POST["loginMail"].','.$_POST["loginPass"].')";
-        $result = mysqli_query($connection , $query);
-        $row    = mysqli_fetch_array($result); 
+    // if(!empty($_POST["loginMail"])) { // true if form was submitted
+    //     $query  = "INSERT INTO tbl_users_200 (fname,lname,email,password)
+    //     VALUES ('.$_POST["fname"].','.$_POST["lname"].','.$_POST["loginMail"].','.$_POST["loginPass"].')";
+    //     $result = mysqli_query($connection , $query);
+    //     $row    = mysqli_fetch_array($result); 
         
-        if(is_array($row)) {
-            $_SESSION["user_id"] = $row['id'];
-            header('Location:'.URL.'posts.php');
-        } else {
-            $message = "invalid username or password";
-        }
+    //     if(is_array($row)) {
+    //         $_SESSION["user_id"] = $row['id'];
+    //         header('Location:'.URL.'posts.php');
+    //     } else {
+    //         $message = "invalid username or password";
+    //     }
         
-    }
+    // }
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">

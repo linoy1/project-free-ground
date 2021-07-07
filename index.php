@@ -1,3 +1,15 @@
+<?php
+    include "db.php";
+    include "config.php";
+    if(!isset($_SESSION["user_id"])){
+        header('Location:'.URL.'login.php');
+    }
+    else
+    {
+        $name = $_SESSION["user_name"];
+    }
+?>
+
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 

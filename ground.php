@@ -45,7 +45,7 @@
                 <span class="fa fa-star"></span>
             </section>
             <h1>לוח זמנים יומי</h1>
-            <?php
+            <!-- <?php
             // $query  = "SELECT * FROM tbl_matches_215 order by matchDate desc";
             $query = "SELECT * FROM tbl_matches_215 AS m
                      WHERE  m.groundid =" . $_SESSION['groundid'];
@@ -84,7 +84,7 @@
             // Close DB connection
             mysqli_close($connection);
         ?>
-            
+             -->
         </main>
     </div>
 

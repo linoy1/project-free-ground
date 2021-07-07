@@ -1,4 +1,3 @@
-
 <?php 
     include "db.php";
     include "config.php";
@@ -13,6 +12,7 @@
         
         if(is_array($row)) {
             $_SESSION["user_id"] = $row['id'];
+            $_SESSION["user_name"] = $row['name'];
             header('Location:'.URL.'posts.php');
         } else {
             $message = "invalid username or password";
@@ -22,7 +22,6 @@
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
