@@ -1,13 +1,34 @@
 <?php 
     include "db.php";
     include "config.php";
-    $query  = "SELECT * FROM tbl_matches_215 order by matchDate desc";
+
+    // if(isset($_POST['id']))
+	// {
+	// 	// Escape variables for security
+	// 	$groundName = mysqli_real_escape_string($connection,$_POST['groundName']);
+	// 	$sport  = mysqli_real_escape_string($connection,$_POST['sport']);
+    //     $playersNum  = mysqli_real_escape_string($connection,$_POST['playersNum']);
+    //     $startTime  = mysqli_real_escape_string($connection,$_POST['startTime']);
+	// 	$endTime  = mysqli_real_escape_string($connection,$_POST['endTime']);
+    //     $date  = mysqli_real_escape_string($connection,$_POST['date']);
+
+
+
+		
+	// 	// SET: insert new data to DB
+	// 	$query = "INSERT INTO tbl_matches_215(groundName,sport,playersNum,startTime,endTime,date) VALUES ('$groundName','$sport','$playersNum','$startTime','$endTime','$date')";
+	// 	$result = mysqli_query($connection, $query);
+		
+	// }
+
+
+    $query  = "SELECT * FROM tbl_matches_215 order by date desc";
     $result = mysqli_query($connection, $query);
 
     if(!$result) { 
         die("DB query failed.");
     }
-    echo "<table class="table table-striped table-hover">
+    echo '<table class="table table-striped table-hover">
             <thead>
                 <tr>
                     <th>תאריך</th>
@@ -17,7 +38,7 @@
                     <th>משתתפים</th>
                     <th>הצטרף</th>
                 </tr>
-            </thead>"
+            </thead>';
     // GET: get data again
     while($row = mysqli_fetch_assoc($result)) { // Results are in an associative array. keys are cols names
         // Output data from each row
@@ -29,8 +50,8 @@
                 <td>". $row["numOfPlayers"] ."</td>
                 <td>". $row["join"] ."</td>
             </tr>"
-    }
-    echo "</table>"
+    ;
+    echo "</table>";
     // Release returned data
     mysqli_free_result($result);
     

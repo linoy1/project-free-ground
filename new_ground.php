@@ -26,20 +26,7 @@
 
 
 <header>
-        <ul>
-            <li> <a href="#">התחבר</a>
-            </li>
-            <li> <a href="#">צור קשר</a>
-            </li>
-            <li> <a href="#">עזרה</a>
-            </li>
-        </ul>
-        <a href="index.html" id="logo"></a>
-
-        <form class="example" action="#">
-            <button type="submit"><i class="fa fa-search"></i></button>
-            <input type="text" placeholder="חיפוש" name="search2">
-        </form>
+        <a href="index.html"  id="logo"></a>
     </header>
     <div class="topnav" id="myTopnav">
         <nav>

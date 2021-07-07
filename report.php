@@ -31,6 +31,10 @@
     </div>
 <div id="wrapper">
         <main >
+<h1>:חוות דעת על מגרש</h1>
+<div><textarea name="report" id="report" cols="40" rows="20"></textarea>
+</div>
+
         </main>
     </div>
 
