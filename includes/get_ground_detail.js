@@ -5,13 +5,6 @@ function getGroundId() {
         groundId = akeyValue[0].split("=")[1];
     return groundId;
 }
-// "id": "1",
-// "name": "אפקה",
-// "address": "השלום 1 תל אביב",
-// "football": true,
-// "basketball": true,
-// "tennis": false,
-// "gym": true
 $(document).ready(function() {
     $.getJSON('data/grounds.json', function(data) {
         var groundId = getGroundId();
@@ -28,11 +21,21 @@ $(document).ready(function() {
         });
         $('h1').html(groundName);
         $('#groundAddress').html(groundAddress);
-        if(groundFootball == true){
-            $('#groundFootball').html('<span class="material-icons md-48>sports_soccer"</span>');
+        if(groundFootball){
+            $('#icons').append('<span class="material-icons md-48">sports_soccer</span>');
+            $('#small-icons').append('<span class="material-icons md-24">sports_soccer</span>');
         }
-        $('#groundBasketball').html(groundBasketball);
-        $('#groundTennis').html(groundTennis);
-        $('#groundGym').html(groundGym);
+        if(groundBasketball){
+            $('#icons').append('<span class="material-icons md-48">sports_basketball</span>');
+            $('#small-icons').append('<span class="material-icons md-24">sports_basketball</span>');
+        }
+        if(groundTennis){
+            $('#icons').append('<span class="material-icons md-48">sports_tennis</span>');
+            $('#small-icons').append('<span class="material-icons md-24">sports_tennis</span>');
+        }
+        if(groundGym){
+            $('#icons').append('<span class="material-icons md-48"> fitness_center</span>');
+            $('#small-icons').append('<span class="material-icons md-24"> fitness_center</span>');
+        }
     })
 })

@@ -1,41 +1,6 @@
 <?php 
     include "db.php";
     include "config.php";
-    $query  = "SELECT * FROM tbl_matches_215 order by matchDate desc";
-    $result = mysqli_query($connection, $query);
-
-    if(!$result) { 
-        die("DB query failed.");
-    }
-    echo "<table class="table table-striped table-hover">
-            <thead>
-                <tr>
-                    <th>תאריך</th>
-                    <th>שעה</th>
-                    <th>מגרש</th>
-                    <th>משחק</th>
-                    <th>משתתפים</th>
-                    <th>הצטרף</th>
-                </tr>
-            </thead>"
-    // GET: get data again
-    while($row = mysqli_fetch_assoc($result)) { // Results are in an associative array. keys are cols names
-        // Output data from each row
-        echo " <tr>
-                <td>". $row["startTime"] ."</td>
-                <td>". $row["endTime"] ."</td>
-                <td>". $row["groundId"] ."</td>
-                <td>". $row["sport"] ."</td>
-                <td>". $row["numOfPlayers"] ."</td>
-                <td>". $row["join"] ."</td>
-            </tr>"
-    }
-    echo "</table>"
-    // Release returned data
-    mysqli_free_result($result);
-    
-    // Close DB connection
-    mysqli_close($connection);
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
@@ -69,6 +34,46 @@
         </nav>
     </div>
     <div id="container">
+        <?php
+            // $query  = "SELECT * FROM tbl_matches_215 order by matchDate desc";
+            $query = "SELECT * FROM tbl_matches_215 AS m
+            LEFT JOIN tbl_matchesusers_215 AS mu ON m.matchid = mu.matchid
+                                            AND mu.userid =" . $_SESSION['id'];
+            $result = mysqli_query($connection, $query);
+
+            if(!$result) { 
+                die("DB query failed.");
+            }
+            echo '<table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>תאריך</th>
+                            <th>שעה</th>
+                            <th>מגרש</th>
+                            <th>משחק</th>
+                            <th>משתתפים</th>
+                            <th>הצטרף</th>
+                        </tr>
+                    </thead>'
+            // GET: get data again
+            while($row = mysqli_fetch_assoc($result)) { // Results are in an associative array. keys are cols names
+                // Output data from each row
+                echo " <tr>
+                        <td>". $row["startTime"] ."</td>
+                        <td>". $row["endTime"] ."</td>
+                        <td>". $row["ground"] ."</td>
+                        <td>". $row["sport"] ."</td>
+                        <td>". $row["numOfPlayers"] ."</td>
+                        <td>". $row["join"] ."</td>
+                    </tr>"
+            }
+            echo "</table>"
+            // Release returned data
+            mysqli_free_result($result);
+            
+            // Close DB connection
+            mysqli_close($connection);
+        ?>
     </div>
 
     <footer></footer>
