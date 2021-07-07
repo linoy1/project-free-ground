@@ -37,8 +37,8 @@
 
             <h2 id="headline"> אפקה-מגרש מרכזי</h2>
             <span id="show-on-map">
-                <button><img src="images/Google_Maps_icon_(2015-2020).svg" id="map-img" alt="map-img"></button>      
-                <span id="dis">234m</span>
+                
+                <a href="https://maps.google.com/?q="><!--address from json--><img src="images/Google_Maps_icon_(2015-2020).svg" id="map-img" alt="map-img"></a> 
                 </span>
             <section class="rate_star">
                 <span class="fa fa-star checked"></span>
@@ -47,37 +47,47 @@
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
             </section>
-
             <h1>לוח זמנים יומי</h1>
-            <table>
-                <tr>
-                    <th>סוג אימון</th>
-                    <th>שעה</th>
-                    <th>משתתפים</th>
-                    <th>מי הזמין</th>
-                </tr>
-                <tr>
-                    <td>כדורגל</td>
-                    <td>16:00</td>
-                    <td>6</td>
-                    <td>רוני כהן</td>
-                </tr>
-                <tr>
-                    <td>כדורגל</td>
-                    <td>16:00</td>
-                    <td>8</td>
-                    <td>שלומי לוי</td>
-                </tr>
+            <!-- <?php
+            // $query  = "SELECT * FROM tbl_matches_215 order by matchDate desc";
+            $query = "SELECT * FROM tbl_matches_215 AS m
+                     WHERE  m.groundid =" . $_SESSION['groundid'];
+            $result = mysqli_query($connection, $query);
 
-                <tr>
-                    <td>כדורגל</td>
-                    <td>16:00</td>
-                    <td>12</td>
-                    <td>אבי כהן</td>
-                </tr>
-
-
-            </table>
+            if(!$result) { 
+                die("DB query failed.");
+            }
+            echo '<table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>תאריך</th>
+                            <th>שעה</th>
+                            <th>מגרש</th>
+                            <th>משחק</th>
+                            <th>משתתפים</th>
+                            <th>הצטרף</th>
+                        </tr>
+                    </thead>'
+            // GET: get data again
+            while($row = mysqli_fetch_assoc($result)) { // Results are in an associative array. keys are cols names
+                // Output data from each row
+                echo " <tr>
+                        <td>". $row["startTime"] ."</td>
+                        <td>". $row["endTime"] ."</td>
+                        <td>". $row["ground"] ."</td>
+                        <td>". $row["sport"] ."</td>
+                        <td>". $row["numOfPlayers"] ."</td>
+                        <td>". $row["join"] ."</td>
+                    </tr>"
+            }
+            echo "</table>"
+            // Release returned data
+            mysqli_free_result($result);
+            
+            // Close DB connection
+            mysqli_close($connection);
+        ?>
+             -->
         </main>
     </div>
 

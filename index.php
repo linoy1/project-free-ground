@@ -1,3 +1,15 @@
+<?php
+    include "db.php";
+    include "config.php";
+    if(!isset($_SESSION["user_id"])){
+        header('Location:'.URL.'login.php');
+    }
+    else
+    {
+        $name = $_SESSION["user_name"];
+    }
+?>
+
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 
@@ -39,19 +51,19 @@
                 <img src="images/logout.png" alt="logout" title="logout">
                 <h4>התנתק</h4>
             </a>
-            <a href="list.html">
+            <a href="find_ground.php">
                 <img src="images/search.png" alt="search" title="search">
                 <h4>חיפוש מגרש</h4>
             </a>
 
-            <a href="add_ground.php">
+            <a href="my_grounds.php">
                 <img src="images/add.png" alt="riding" title="riding">
-                <h4>הוסף מגרש</h4>
+                <h4>המגרשים שלי</h4>
             </a>
 
             <a href="#">
                 <img src="images/settings.png" alt="settings" title="settings">
-                <h4>הגדרות</h4>
+                <h4>המשחקים שלי</h4>
             </a>
 
 

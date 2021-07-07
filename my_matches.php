@@ -2,25 +2,6 @@
     include "db.php";
     include "config.php";
 
-    // if(isset($_POST['id']))
-	// {
-	// 	// Escape variables for security
-	// 	$groundName = mysqli_real_escape_string($connection,$_POST['groundName']);
-	// 	$sport  = mysqli_real_escape_string($connection,$_POST['sport']);
-    //     $playersNum  = mysqli_real_escape_string($connection,$_POST['playersNum']);
-    //     $startTime  = mysqli_real_escape_string($connection,$_POST['startTime']);
-	// 	$endTime  = mysqli_real_escape_string($connection,$_POST['endTime']);
-    //     $date  = mysqli_real_escape_string($connection,$_POST['date']);
-
-
-
-		
-	// 	// SET: insert new data to DB
-	// 	$query = "INSERT INTO tbl_matches_215(groundName,sport,playersNum,startTime,endTime,date) VALUES ('$groundName','$sport','$playersNum','$startTime','$endTime','$date')";
-	// 	$result = mysqli_query($connection, $query);
-		
-	// }
-
 
     $query  = "SELECT * FROM tbl_matches_215 order by date desc";
     $result = mysqli_query($connection, $query);

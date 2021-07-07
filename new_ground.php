@@ -55,32 +55,13 @@
             <br><br>
             מתקני כושר:<?php echo $_GET["fitness"];?>
             </section>
+
         </div>
         <footer class="bg-light text-center ">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
             <!-- Grid container -->
-            <div class="container">
 
-                <!-- Section: Social media -->
-                <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998 " href="#!" role="button"><i class="fa fa-facebook-f"></i></a>
-
-                    <!-- Twitter -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fa fa-twitter"></i></a>
-
-                    <!-- Google -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fa fa-google"></i></a>
-
-                    <!-- Instagram -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fa fa-instagram"></i></a>
-
-                    <!-- Linkedin -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fa fa-linkedin"></i></a>
-                </section>
-                <!-- Section: Social media -->
-            </div>
             <div class="blackLine"></div>
             <!-- Grid container -->
             2021 ©

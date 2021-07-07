@@ -1,4 +1,4 @@
-var groundName, groundAdress, groundFootball, groundBasketball, groundTennis, groundGym;
+var groundName, groundAddress, groundFootball, groundBasketball, groundTennis, groundGym;
 
 function getGroundId() {
     var akeyValue = window.location.search.substring(1).split('&'),
@@ -12,7 +12,7 @@ $(document).ready(function() {
         $.each(data.products, function(u, obj) {
             if (obj.id == groundId) {
                 groundName = obj.name;
-                groundAdress = obj.address;
+                groundAddress = obj.address;
                 groundFootball = obj.football;
                 groundBasketball = obj.basketball;
                 groundTennis = obj.tennis;
@@ -20,10 +20,22 @@ $(document).ready(function() {
             }
         });
         $('h1').html(groundName);
-        $('#groundAdress').html(groundAdress);
-        $('#groundFotball').html(groundFootball);
-        $('#groundBasketball').html(groundBasketball);
-        $('#groundTennis').html(groundTennis);
-        $('#groundGym').html(groundGym);
+        $('#groundAddress').html(groundAddress);
+        if(groundFootball){
+            $('#icons').append('<span class="material-icons md-48">sports_soccer</span>');
+            $('#small-icons').append('<span class="material-icons md-24">sports_soccer</span>');
+        }
+        if(groundBasketball){
+            $('#icons').append('<span class="material-icons md-48">sports_basketball</span>');
+            $('#small-icons').append('<span class="material-icons md-24">sports_basketball</span>');
+        }
+        if(groundTennis){
+            $('#icons').append('<span class="material-icons md-48">sports_tennis</span>');
+            $('#small-icons').append('<span class="material-icons md-24">sports_tennis</span>');
+        }
+        if(groundGym){
+            $('#icons').append('<span class="material-icons md-48"> fitness_center</span>');
+            $('#small-icons').append('<span class="material-icons md-24"> fitness_center</span>');
+        }
     })
 })
