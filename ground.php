@@ -18,18 +18,19 @@
         <h2>שלום:<label id="userName"></label> </h2>
 
     </header>
-    <div class="topnav" id="myTopnav">
-        <nav>
-            <a href="index.php">עמוד בית</a>
-            <a href="find_ground.php">חיפוש מגרש</a>
-            <a href="my_grounds.php">המגרשים שלי</a>
-            <a href="my_matches.php">המשחקים שלי</a>
-            <a href="settings.php">הגדרות</a>
-            <a href="#">התנתק</a>
-            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+    <div >
+        <nav class="topnav" id="myTopnav">
+<ul>
+<li><a href="index.php">עמוד בית</a></li>
+<li><a href="find_ground.php">חיפוש מגרש</a></li>
+<li><a href="my_grounds.php">המגרשים שלי</a></li>
+<li><a href="my_matches.php">המשחקים שלי</a></li>
+<li><a href="settings.php">הגדרות</a><a href="#">התנתק</a></li>
+<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                 <i class="fa fa-bars"></i>
             </a>
 
+</ul>
         </nav>
     </div>
 <div id="wrapper">

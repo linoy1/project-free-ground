@@ -29,16 +29,19 @@
 <header>
         <a href="index.html"  id="logo"></a>
     </header>
-    <div class="topnav" id="myTopnav">
-        <nav>
-            <a href="index.html">עמוד בית</a>
-            <a href="add_ground.html">הוסף מגרש</a>
-            <a href="list.html">חיפוש מגרש</a>
-            <a href="#">הגדרות</a>
-            <a href="#">התנתק</a>
-            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+    <div >
+        <nav class="topnav" id="myTopnav">
+<ul>
+<li><a href="index.php">עמוד בית</a></li>
+<li><a href="find_ground.php">חיפוש מגרש</a></li>
+<li><a href="my_grounds.php">המגרשים שלי</a></li>
+<li><a href="my_matches.php">המשחקים שלי</a></li>
+<li><a href="settings.php">הגדרות</a><a href="#">התנתק</a></li>
+<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                 <i class="fa fa-bars"></i>
             </a>
+
+</ul>
         </nav>
     </div>
 
@@ -120,28 +123,7 @@
     <footer class="bg-light text-center ">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            <!-- Grid container -->
-            <div class="container">
 
-                <!-- Section: Social media -->
-                <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998 " href="#!" role="button"><i class="fa fa-facebook-f"></i></a>
-
-                    <!-- Twitter -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fa fa-twitter"></i></a>
-
-                    <!-- Google -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fa fa-google"></i></a>
-
-                    <!-- Instagram -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fa fa-instagram"></i></a>
-
-                    <!-- Linkedin -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fa fa-linkedin"></i></a>
-                </section>
-                <!-- Section: Social media -->
-            </div>
             <div class="blackLine"></div>
             <!-- Grid container -->
             2021 ©

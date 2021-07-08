@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" media="screen">
-    <!-- <script src="js/scripts.js"></script> -->
+    <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap" rel="stylesheet">
@@ -24,16 +24,19 @@
         <header >
             <a href="index.php" id="logo"></a>
         </header>
-        <div class="topnav" id="myTopnav">
-        <nav>
-            <a href="index.php">עמוד בית</a>
-            <a href="find_ground.php">חיפוש מגרש</a>
-            <a href="my_grounds.php">המגרשים שלי</a>
-            <a href="my_matches.php">המשחקים שלי</a>
-            <a href="settings.php">הגדרות</a><a href="#">התנתק</a>
-            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+        <div >
+        <nav class="topnav" id="myTopnav">
+<ul>
+<li><a href="index.php">עמוד בית</a></li>
+<li><a href="find_ground.php">חיפוש מגרש</a></li>
+<li><a href="my_grounds.php">המגרשים שלי</a></li>
+<li><a href="my_matches.php">המשחקים שלי</a></li>
+<li><a href="settings.php">הגדרות</a><a href="#">התנתק</a></li>
+<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                 <i class="fa fa-bars"></i>
             </a>
+
+</ul>
         </nav>
     </div>
       <div id="wrapper">      
@@ -41,7 +44,7 @@
             <h2 id="headline"> הוסף מגרש</h2>
             <form id="form" action="new_ground.php" method="GET">
                 <div class="mb-3 row">
-                    <label for="groundName" class="col-sm-2 col-form-label fs-3">:שם המגרש</label>
+                    <label for="groundName" class="col-sm-2 col-form-label fs-3">שם המגרש</label>
                     <div class="col-sm-5">
                         <input type="text" class="form-control fs-5">
                 </div>

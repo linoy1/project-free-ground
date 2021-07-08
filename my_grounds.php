@@ -16,17 +16,19 @@
     <header>
         <a href="index.html"  id="logo"></a>
     </header>
-    <div class="topnav" id="myTopnav">
-        <nav>
-            <a href="index.php">עמוד בית</a>
-            <a href="find_ground.php">חיפוש מגרש</a>
-            <a href="my_grounds.php">המגרשים שלי</a>
-            <a href="my_matches.php">המשחקים שלי</a>
-            <a href="settings.php">הגדרות</a>
-            <a href="#">התנתק</a>
-            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+    <div >
+        <nav class="topnav" id="myTopnav">
+<ul>
+<li><a href="index.php">עמוד בית</a></li>
+<li><a href="find_ground.php">חיפוש מגרש</a></li>
+<li><a href="my_grounds.php">המגרשים שלי</a></li>
+<li><a href="my_matches.php">המשחקים שלי</a></li>
+<li><a href="settings.php">הגדרות</a><a href="#">התנתק</a></li>
+<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                 <i class="fa fa-bars"></i>
             </a>
+
+</ul>
         </nav>
     </div>
 <div id="wrapper">
@@ -34,8 +36,17 @@
         </main>
     </div>
 
-    <footer></footer>
+    <footer class="bg-light text-center ">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
 
+            <div class="blackLine"></div>
+            <!-- Grid container -->
+            2021 ©
+            <a class="text-dark" href="#">Free-Ground.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 </body>
 
 </html>

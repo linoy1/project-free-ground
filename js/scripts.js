@@ -69,3 +69,17 @@ function RemoveClass(element, name) {
 // xmlhttp.open("POST", "find.php");
 // xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 // xmlhttp.send("x=" + dbParam);
+
+function deleteMatch(id) {
+    if (confirm('האם את\ה בטוח\ה?')) {
+        $.ajax({
+            type: 'POST',
+            url: 'delete.php',
+            data: { delete_id: id },
+            success: function(data) {
+                $('#delete' + id).hide();
+            }
+        });
+    }
+
+}
