@@ -20,8 +20,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="includes/cities.js"></script>
-
-<<<<<<< HEAD:add_ground.php
     <body>    
         <header >
             <a href="index.php" id="logo"></a>
