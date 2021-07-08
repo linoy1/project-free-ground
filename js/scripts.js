@@ -55,17 +55,17 @@ function RemoveClass(element, name) {
     element.className = arr1.join(" ");
 }
 
-const dbParam = JSON.stringify({ table: "category", limit: 5 });
-const xmlhttp = new XMLHttpRequest();
-xmlhttp.onload = function() {
-    myObj = JSON.parse(this.responseText);
-    let text = "<table border='1'>"
-    for (let x in myObj) {
-        text += "<tr><td>" + myObj[x].name + "</td></tr>";
-    }
-    txt += "</table>"
-    document.getElementById("demo").innerHTML = txt;
-}
-xmlhttp.open("POST", "find.php");
-xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xmlhttp.send("x=" + dbParam);
+// const dbParam = JSON.stringify({ table: "category", limit: 5 });
+// const xmlhttp = new XMLHttpRequest();
+// xmlhttp.onload = function() {
+//     myObj = JSON.parse(this.responseText);
+//     let text = "<table border='1'>"
+//     for (let x in myObj) {
+//         text += "<tr><td>" + myObj[x].name + "</td></tr>";
+//     }
+//     txt += "</table>"
+//     document.getElementById("demo").innerHTML = txt;
+// }
+// xmlhttp.open("POST", "find.php");
+// xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+// xmlhttp.send("x=" + dbParam);
