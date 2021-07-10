@@ -33,7 +33,9 @@
 
 </head>
 
-<body id="admin_index">
+<body>
+
+
      <header>
         <a href="index.html" id="logo"></a>
     </header>

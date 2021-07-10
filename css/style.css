@@ -57,11 +57,9 @@ header {
 #logo {
     background-image: url(../images/logo.jpg);
     background-repeat: no-repeat;
-    height: 50px;
-    width: 300px;
-    margin-top: 20px;
-    /* margin: auto; */
-    margin-right: 35%;
+    height: 33px;
+    width: 250px;
+    margin: 20px auto;
     display: block;
 }
 
@@ -137,8 +135,11 @@ select {
     background-color: #333;
     width: 100%;
     text-align: center;
+	line-height: 50px;
 }
-
+.topnav ul{
+	margin-bottom: 0 !important;
+}
 .topnav ul li {
     display: inline;
 }
@@ -183,6 +184,8 @@ main {
     margin-bottom: 20px;
     margin-top: 20px;
     border: 5px solid #3a3f40;
+	border-radius: 15px;
+	padding: 10px;
 }
 
 #sort {
@@ -198,7 +201,7 @@ main {
 
 #myBtnContainer {
     margin-top: 20px;
-    margin-left: 400px;
+	text-align: center;
 }
 
 .filterDiv {
@@ -223,8 +226,11 @@ main {
     padding: 12px 16px;
     background-color: #f1f1f1;
     cursor: pointer;
+	line-height: 44px !important;
 }
-
+.bold {
+	font-weight:bold !important;
+}
 
 /* Add a light grey background on mouse-over */
 
@@ -252,7 +258,6 @@ main {
     display: block;
     height: 100px;
     left: 30px;
-    margin-top: 30px;
     background-color: #efefef;
     text-decoration: none;
     text-align: center;
@@ -260,9 +265,8 @@ main {
     box-shadow: 1px 1px;
     border-radius: 25px;
     font-size: 30px;
-    margin-bottom: 30px;
-    margin-right: 10%;
     width: 70%;
+	margin: 30px auto;
 }
 
 .groundsList a:hover {
@@ -279,6 +283,13 @@ main {
     float: right;
     margin-right: 5%;
     margin-top: 5%;
+	width: 190px;
+}
+
+.groundsList h6 {
+    float: right;
+    margin-right: 5%;
+    margin-top: 5.8%;
 }
 
 .bg-light {
@@ -376,7 +387,6 @@ h1 {
 .checked {
     color: orange;
 }
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -403,6 +413,10 @@ tr:nth-child(even) {
     font-size: 24px;
 }
 
+.material-icons.md-28 {
+    font-size: 28px;
+}
+
 .material-icons.md-36 {
     font-size: 36px;
 }
@@ -427,8 +441,8 @@ tr:nth-child(even) {
     font-size: 48px;
 }
 
-.material-icons.md-inactive {
-    color: rgba(0, 0, 0, 0.26);
+.material-icons.md-inactive, .md-inactive {
+    color: rgba(0, 0, 0, 0.26) !important;
 }
 
 
@@ -470,9 +484,6 @@ tr:nth-child(even) {
         display: block;
         margin-right: 300px;
         margin-top: 15px;
-    }
-    .main_menu {
-        margin-right: 18px;
     }
     .main_menu a {
         display: inline-block;

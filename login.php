@@ -2,18 +2,16 @@
     include "db.php";
     include "config.php";
     if(!empty($_POST["loginMail"])) { // true if form was submitted
-        $query  = "SELECT * FROM tbl_users_200 WHERE email='" 
-        . $_POST["loginMail"] 
-        . "' and password = '"
-        . $_POST["loginPass"]
-        ."'";
+        $query  = "SELECT * FROM tbl_users_215 WHERE email='" . $_POST["loginMail"] . "' and password = '". $_POST["loginPass"]."'";
         $result = mysqli_query($connection , $query);
         $row    = mysqli_fetch_array($result); 
         
         if(is_array($row)) {
+			session_start();
             $_SESSION["user_id"] = $row['id'];
-            $_SESSION["user_name"] = $row['name'];
-            header('Location:'.URL.'posts.php');
+            $_SESSION["user_name"] = $row['firstName'];
+			//echo '<script>window.location.href="index.php";</script>';
+            header('Location:'.URL.'index.php');
         } else {
             $message = "invalid username or password";
         }
@@ -46,21 +44,7 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html"  id="logo"></a>
-    </header>
-    <nav class="topnav" id="myTopnav">
-            <ul>
-                <li><a href="index.php">עמוד בית</a></li>
-                <li><a href="find_ground.php">חיפוש מגרש</a></li>
-                <li><a href="my_grounds.php">המגרשים שלי</a></li>
-                <li><a href="my_matches.php">המשחקים שלי</a></li>
-                <li><a href="settings.php">הגדרות</a></li>
-                <li><a href="#">התנתק</a></li>
-               <li> <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-                <i class="fa fa-bars"></i></a></li>
-            </ul>
-        </nav>
+    <?php include "includes/header.php"; ?>
 <div id="container">
         <h1>Login</h1>
         <form action="#" method="post" id="frm">
