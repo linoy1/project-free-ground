@@ -47,7 +47,7 @@
     <div id="my_grounds_container">
     <h1>המגרשים שלי:</h1>
         <?php
-         $query  = "SELECT * FROM tbl_grounds_215 order by date desc";
+         $query  = "SELECT * FROM tbl_grounds_215 order by id desc";
          $result = mysqli_query($connection, $query);
      
          if(!$result) { 
@@ -63,6 +63,8 @@
                          <th>כדורסל</th>
                          <th>טניס</th>
                          <th>מתקני כושר</th>
+                         <th>מחיקת מגרש</th>
+                         <th>עריכת מגרש</th>
                          </tr>
                  </thead>';
          // GET: get data again
@@ -76,8 +78,8 @@
                      <td>". $row["basketball"] ."</td>
                      <td>". $row["tennis"] ."</td>
                      <td>". $row["gym"] ."</td>
-                     <td><button  class=\'btn btn-danger' onclick=\'deleteMatch'(" .$row['id']. ")>מחק משחק</buttton</td>
-                     <td><button class=\'btn btn-' (" .$row['id']. ")>ערוך משחק</button></td>
+                     <td><button  class=\'btn btn-danger' onclick=\'deleteMatch'(" .$row['id']. ")>מחק מגרש</buttton</td>
+                     <td><button class=\'btn btn-' (" .$row['id']. ")>ערוך מגרש</button></td>
                      </tr>";
          }
          echo "</table>";
