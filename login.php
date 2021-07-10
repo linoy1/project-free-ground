@@ -49,21 +49,18 @@
     <header>
         <a href="index.html"  id="logo"></a>
     </header>
-    <div >
-        <nav class="topnav" id="myTopnav">
-<ul>
-<li><a href="index.php">עמוד בית</a></li>
-<li><a href="find_ground.php">חיפוש מגרש</a></li>
-<li><a href="my_grounds.php">המגרשים שלי</a></li>
-<li><a href="my_matches.php">המשחקים שלי</a></li>
-<li><a href="settings.php">הגדרות</a><a href="#">התנתק</a></li>
-<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-                <i class="fa fa-bars"></i>
-            </a>
-
-</ul>
+    <nav class="topnav" id="myTopnav">
+            <ul>
+                <li><a href="index.php">עמוד בית</a></li>
+                <li><a href="find_ground.php">חיפוש מגרש</a></li>
+                <li><a href="my_grounds.php">המגרשים שלי</a></li>
+                <li><a href="my_matches.php">המשחקים שלי</a></li>
+                <li><a href="settings.php">הגדרות</a></li>
+                <li><a href="#">התנתק</a></li>
+               <li> <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i></a></li>
+            </ul>
         </nav>
-    </div>
 <div id="container">
         <h1>Login</h1>
         <form action="#" method="post" id="frm">

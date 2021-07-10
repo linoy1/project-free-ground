@@ -1,3 +1,8 @@
+<?php 
+    include "db.php";
+    include "config.php";
+?>
+
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 
@@ -22,25 +27,20 @@
 
 <body>  
     <header>
-
-    
-        <a href="index.html"  id="logo"></a>
+      <a href="index.html"  id="logo"></a>
     </header>
-    <div >
-        <nav class="topnav" id="myTopnav">
-<ul>
-<li><a href="index.php">עמוד בית</a></li>
-<li><a href="find_ground.php">חיפוש מגרש</a></li>
-<li><a href="my_grounds.php">המגרשים שלי</a></li>
-<li><a href="my_matches.php">המשחקים שלי</a></li>
-<li><a href="settings.php">הגדרות</a><a href="#">התנתק</a></li>
-<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-                <i class="fa fa-bars"></i>
-            </a>
-
-</ul>
+    <nav class="topnav" id="myTopnav">
+            <ul>
+                <li><a href="index.php">עמוד בית</a></li>
+                <li><a href="find_ground.php">חיפוש מגרש</a></li>
+                <li><a href="my_grounds.php">המגרשים שלי</a></li>
+                <li><a href="my_matches.php">המשחקים שלי</a></li>
+                <li><a href="settings.php">הגדרות</a></li>
+                <li><a href="#">התנתק</a></li>
+               <li> <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i></a></li>
+            </ul>
         </nav>
-    </div>
 <div id="wrapper">
         <main > 
 
@@ -65,7 +65,7 @@
             </div>
 
             <div class="mb-3 row">
-                    <label for="groundName" class="col-sm-2 col-form-label fs-3">כמות משתתפים מקסימלית:</label>
+                    <label for="groundName" class="col-sm-2 col-form-label fs-3">מס' משתתפים:</label>
                     <div class="col-sm-5">
                     <input id="participantNum"  class="form-control fs-5" type="number" name="tech" value="2" min="2" max="50" step="1">
                 </div>
@@ -94,8 +94,9 @@
        min="06:00" max="24:00" required>                
        </div>
             </div>
-            <button type="submit" class="btn btn-primary fs-2" id="submit" value="Send form">שלח</button>
-
+                    <div class="col-sm-3">
+                    <button type="submit" class="btn btn-primary fs-2" id="submit" value="Send form">שלח</button>
+                </div>
 
         </form>
 

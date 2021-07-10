@@ -48,19 +48,19 @@
 
         <section class="main_menu">
             <a href="#">
-                <img src="images/logout.png" alt="logout" title="logout">
+                <img src="images/logout.png" alt="התנתק" title="logout">
                 <h4>התנתק</h4>
             </a>
             <a href="add_ground.php">
-                <img src="images/search.png" alt="search" title="search">
+                <img src="images/search.png" alt="הוספת מגרש" title="search">
                 <h4>הוספת מגרש</h4>
             </a>
             <a href="#">
-                <img src="images/search.png" alt="search" title="search">
+                <img src="images/users.png" alt="ניהול משתמשים" title="search">
                 <h4>ניהול משתמשים</h4>
             </a>
-            <a href="add_ground.php">
-                <img src="images/search.png" alt="search" title="search">
+            <a href="#">
+                <img src="images/report.jpg" alt="דיווחי משתמשים" title="search">
                 <h4>דיווחי משתמשים</h4>
             </a>
 

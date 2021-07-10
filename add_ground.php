@@ -1,3 +1,8 @@
+<?php 
+    include "db.php";
+    include "config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="heb" dir="rtl">
 
@@ -24,25 +29,22 @@
         <header >
             <a href="index.php" id="logo"></a>
         </header>
-        <div >
         <nav class="topnav" id="myTopnav">
-<ul>
-<li><a href="index.php">עמוד בית</a></li>
-<li><a href="find_ground.php">חיפוש מגרש</a></li>
-<li><a href="my_grounds.php">המגרשים שלי</a></li>
-<li><a href="my_matches.php">המשחקים שלי</a></li>
-<li><a href="settings.php">הגדרות</a><a href="#">התנתק</a></li>
-<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-                <i class="fa fa-bars"></i>
-            </a>
-
-</ul>
+            <ul>
+                <li><a href="index.php">עמוד בית</a></li>
+                <li><a href="find_ground.php">חיפוש מגרש</a></li>
+                <li><a href="my_grounds.php">המגרשים שלי</a></li>
+                <li><a href="my_matches.php">המשחקים שלי</a></li>
+                <li><a href="settings.php">הגדרות</a></li>
+                <li><a href="#">התנתק</a></li>
+               <li> <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i></a></li>
+            </ul>
         </nav>
-    </div>
       <div id="wrapper">      
-    
-            <h2 id="headline"> הוסף מגרש</h2>
-            <form id="form" action="new_ground.php" method="GET">
+    <main>
+            <h1 id="headline"> הוסף מגרש</h1>
+            <form id="add_ground_form" action="new_ground.php" method="GET">
                 <div class="mb-3 row">
                     <label for="groundName" class="col-sm-2 col-form-label fs-3">שם המגרש</label>
                     <div class="col-sm-5">
@@ -122,6 +124,7 @@
             </div>
 
         </form>
+        </main>
     </div>
     <footer class="bg-light text-center ">
         <!-- Copyright -->

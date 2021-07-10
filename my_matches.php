@@ -11,46 +11,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free-Ground</title>
     <link rel="stylesheet" href="css/style.css" media="screen">
+
     <script src="js/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous"
-            />
-        <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"/>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"
-        ></script>
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <a href="index.html"  id="logo"></a>
     </header>
-    <div >
-        <nav class="topnav" id="myTopnav">
-<ul>
-<li><a href="index.php">עמוד בית</a></li>
-<li><a href="find_ground.php">חיפוש מגרש</a></li>
-<li><a href="my_grounds.php">המגרשים שלי</a></li>
-<li><a href="my_matches.php">המשחקים שלי</a></li>
-<li><a href="settings.php">הגדרות</a><a href="#">התנתק</a></li>
-<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-                <i class="fa fa-bars"></i>
-            </a>
-
-</ul>
+    <nav class="topnav" id="myTopnav">
+            <ul>
+                <li><a href="index.php">עמוד בית</a></li>
+                <li><a href="find_ground.php">חיפוש מגרש</a></li>
+                <li><a href="my_grounds.php">המגרשים שלי</a></li>
+                <li><a href="my_matches.php">המשחקים שלי</a></li>
+                <li><a href="settings.php">הגדרות</a></li>
+                <li><a href="#">התנתק</a></li>
+               <li> <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i></a></li>
+            </ul>
         </nav>
-    </div>
-    <div id="container">
+    <div id="my_matches_container">
     <h1>המשחקים שלי:</h1>
         <?php
          $query  = "SELECT * FROM tbl_matches_215 order by date desc";
@@ -88,8 +82,8 @@
                      <td>". $row["sport"] ."</td>
                      <td>". $row["playersNum"] ."</td>
                      <td>". $row["join"] ."</td>
-                     <td><button  class=\'btn btn-danger' onclick='deleteMatch'(".$row['id']. ")>מחק משחק</buttton</td>
-                     <td><button class=\'btn btn-danger' (".$row['id']. ")>ערוך משחק</button></td>
+                     <td><button  class=\'btn btn-danger' onclick=\'deleteMatch'(" .$row['id']. ")>מחק משחק</buttton</td>
+                     <td><button class=\'btn btn-danger' (" .$row['id']. ")>ערוך משחק</button></td>
                      </tr>";
          }
          echo "</table>";
