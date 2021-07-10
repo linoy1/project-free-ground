@@ -83,7 +83,7 @@
                      <td>". $row["playersNum"] ."</td>
                      <td>". $row["join"] ."</td>
                      <td><button  class=\'btn btn-danger' onclick=\'deleteMatch'(" .$row['id']. ")>מחק משחק</buttton</td>
-                     <td><button class=\'btn btn-danger' (" .$row['id']. ")>ערוך משחק</button></td>
+                     <td><button class=\'btn btn-' (" .$row['id']. ")>ערוך משחק</button></td>
                      </tr>";
          }
          echo "</table>";

@@ -471,6 +471,9 @@ tr:nth-child(even) {
         margin-right: 300px;
         margin-top: 15px;
     }
+    .main_menu {
+        margin-right: 18px;
+    }
     .main_menu a {
         display: inline-block;
         width: 200px;
