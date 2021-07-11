@@ -1,5 +1,5 @@
 	<header>
-        <a href="index.html"  id="logo"></a>
+        <a href="index.php"  id="logo"></a>
     </header>
     <nav class="topnav" id="myTopnav">
             <ul>
