@@ -7,7 +7,7 @@
 ?>
 
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html dir="rtl" lang="he">
 
 <head>
 	<?php include "includes/in_header.php"; ?>
@@ -51,20 +51,15 @@
 					</div>
 				<?php } ?>
             </section>
+            <?php
+                if($_SESSION["user_type"] == "admin"){
+            ?>
+                <button type="button" class="btn btn-primary" onclick="location.href='add_ground.php'">הוסף מגרש</button>
+            <?php
+            }?>
         </main>
     </div>
-    <footer class="bg-light text-center ">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-
-            <div class="blackLine"></div>
-            <!-- Grid container -->
-            2021 ©
-            <a class="text-dark" href="#">Free-Ground.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-
+    <?php include "includes/footer.php"; ?>
 </body>
 
 </html>

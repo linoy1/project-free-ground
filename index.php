@@ -12,10 +12,11 @@
 ?>
 
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html dir="rtl" lang="he">
 
 <head>
 <?php include "includes/in_header.php"; ?>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 
         <section class="main_menu">
             <a href="#">
-                <img src="images/logout.png" alt="logout" title="logout">
+                <span class="material-icons md-80 main-icons">logout</span>
                 <h4>התנתק</h4>
             </a>
             <a href="find_ground.php">
@@ -46,17 +47,7 @@
 
         </section>
     </div>
-     <footer class="bg-light text-center ">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
- 
-            <div class="blackLine"></div>
-            <!-- Grid container -->
-            2021 ©
-            <a class="text-dark" href="#">Free-Ground.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+    <?php include "includes/footer.php"; ?>
 
 </body>
 
