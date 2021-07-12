@@ -21,27 +21,43 @@
 
 <body>
 <?php include "includes/header.php"; ?>
-	<div class="helloTxt"><?php echo 'שלום '. $name ?></div>
     <div id="wrapper">
 
+        <h4 id="helloTxt"><?php echo 'שלום '. $name ?></h4>
         <section class="main_menu">
-            <a href="#">
-                <span class="material-icons md-80 main-icons">logout</span>
-                <h4>התנתק</h4>
+            <?php if(isset($_SESSION["user_type"]) && $_SESSION["user_type"]=="admin"){?>
+            <a href="manage_grounds.php">
+                <span class="material-icons md-48">sports_score</span>
+                <h4>ניהול מגרשים</h4>
             </a>
+            <a href="#">
+                <span class="material-icons md-48">manage_accounts</span>
+                <h4>ניהול משתמשים</h4>
+            </a>
+            <a href="#">
+                <span class="material-icons md-48">summarize</span>
+                <h4>דו"חות</h4>
+            </a>
+            <?php }else{?>
             <a href="find_ground.php">
-                <img src="images/search.png" alt="search" title="search">
+                <span class="material-icons md-48">search</span>
                 <h4>חיפוש מגרש</h4>
             </a>
 
-            <a href="my_grounds.php">
-                <img src="images/add.png" alt="riding" title="riding">
+            <a href="#">
+                <span class="material-icons md-48">sports_score</span>
                 <h4>המגרשים שלי</h4>
             </a>
 
-            <a href="#">
-                <img src="images/settings.png" alt="settings" title="settings">
+            <a href="my_matches.php">
+                <span class="material-icons md-48">event_note</span>
                 <h4>המשחקים שלי</h4>
+            </a> 
+            
+            <?php }?>
+            <a href="logout.php">
+                <span class="material-icons md-48">logout</span>
+                <h4>התנתק</h4>
             </a>
 
 

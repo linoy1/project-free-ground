@@ -3,7 +3,6 @@
     include "config.php";
 	$query  = "SELECT * FROM tbl_grounds_215";
     $result = mysqli_query($connection , $query);
-    $row    = mysqli_fetch_array($result); 
 ?>
 
 <!DOCTYPE html>
@@ -51,12 +50,6 @@
 					</div>
 				<?php } ?>
             </section>
-            <?php
-                if($_SESSION["user_type"] == "admin"){
-            ?>
-                <button type="button" class="btn btn-primary" onclick="location.href='add_ground.php'">הוסף מגרש</button>
-            <?php
-            }?>
         </main>
     </div>
     <?php include "includes/footer.php"; ?>

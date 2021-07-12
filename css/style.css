@@ -21,9 +21,12 @@ body {
 
 
 /* index.html */
-
+/* 
 #indexPage .topnav {
     height: 10px;
+} */
+.main_menu{
+    margin-top: 80px;
 }
 
 .main_menu a {
@@ -33,15 +36,16 @@ body {
     width: 200px;
     height: 200px;
     margin-left: 30px;
-    margin-top: 160px;
     background-color: #efefef;
     text-decoration: none;
     text-align: center;
     color: #000000;
+    border-radius: 45px;
 }
 
 .main_menu a:hover {
-    background-color: rgb(97, 94, 94);
+    background-color: rgb(194, 194, 194);
+    color: #000000;
 }
 
 .main_menu a span {
@@ -50,11 +54,9 @@ body {
     width: 80px;
     height: 80px;
 }
-.main_menu img {
+
+#helloTxt{
     margin: 0 auto;
-    margin-top: 50px;
-    width: 80px;
-    height: 80px;
 }
 
 header {
@@ -72,62 +74,11 @@ header {
 }
 
 
+form .row{
+    justify-content: center;
+}
+
 /* ------------------ */
-
-.example {
-    float: left;
-    width: 200px;
-}
-
-#add_ground_form.example input[type=text] {
-    padding: 10px;
-    width: 80%;
-    font-size: 15px;
-    border: 1px solid grey;
-    background: #f1f1f1;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-    margin-bottom: 20px;
-    height: 30px;
-}
-
-#add_ground_form.example button {
-    float: left;
-    width: 20%;
-    padding: 1px;
-    color: white;
-    background-color: #333;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    border: none;
-    margin-bottom: 20px;
-    /* height: 30px; */
-}
-
-#add_ground_form.example button:hover {
-    background-color: #ddd;
-}
-
-#add_ground_form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-#add_ground_form,
-input,
-select {
-    width: 80%;
-    margin: auto;
-    margin-bottom: 30px;
-}
-
-#add_ground_form {
-    position: absolute;
-}
-
-
-/* ------------ */
 
 #wrapper {
     width: 1000px;
@@ -193,17 +144,6 @@ main {
     border: 5px solid #3a3f40;
 	border-radius: 15px;
 	padding: 10px;
-}
-
-#sort {
-    font-size: 26px;
-    margin-top: 20px;
-    margin-left: 410px;
-}
-
-#sort-value {
-    margin-right: 2%;
-    font-size: 20px;
 }
 
 #myBtnContainer {
@@ -340,15 +280,16 @@ i.fa {
     width: 100%;
 }
 
-#form {}
-
 #submit {
     width: 100%;
 }
 
 
-/* object */
-
+/* ground */
+#ground_address {
+    margin-right: 40%;
+    font-size: 20px;
+}
 #show-on-map button {
     background: #efefef;
     border: #ccc;
@@ -369,21 +310,22 @@ i.fa {
     outline: none;
 }
 
-#dis {
-    /* text-align: center; */
-    margin-right: 1%;
-    font-size: 20px;
+#schedule{
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+.add-btn{
+    margin-right:44%;
+    margin-left:44%;
+    margin-top:4%;
 }
 
 #map-img {
-    width: 100%;
-    height: 35px;
-}
-
-.rate_star {
-    width: 100px;
-    margin: 0 auto;
-    margin-right: 44%;
+    height: 40px;
 }
 
 h1 {
@@ -394,23 +336,6 @@ h1 {
 .checked {
     color: orange;
 }
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-}
-/* 
-td,
-th {
-    border: 1px solid #efefef;
-    text-align: center;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #efefef;
-} */
 
 .material-icons.md-18 {
     font-size: 18px;
@@ -432,9 +357,6 @@ tr:nth-child(even) {
     font-size: 48px;
 }
 
-.material-icons.md-80 {
-    font-size: 48px;
-}
 
 .material-icons-two-tone.md-18 {
     font-size: 18px;

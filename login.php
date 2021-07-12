@@ -1,19 +1,18 @@
 <?php 
     include "db.php";
     include "config.php";
+    session_start();
+    $_SESSION["user_type"] = "user";
     if(!empty($_POST["loginMail"])) { // true if form was submitted
         $query  = "SELECT * FROM tbl_users_215 WHERE email='" . $_POST["loginMail"] . "' and password = '". $_POST["loginPass"]."'";
         $result = mysqli_query($connection , $query);
         $row    = mysqli_fetch_array($result); 
         
         if(is_array($row)) {
-			session_start();
             $_SESSION["user_id"] = $row['id'];
             $_SESSION["user_name"] = $row['firstName'];
             if($row['admin']){
                 $_SESSION["user_type"] = "admin";
-            }else{
-                $_SESSION["user_type"] = "user";
             }
             header('Location:'.URL.'index.php');
         }else {
@@ -36,7 +35,7 @@
             <div class="mb-3 row">
                 <label for="loginMail" class="col-sm-2 col-form-label fs-3">אימייל</label>
                 <div class="col-sm-5">
-                    <input type="email" class="form-control fs-5" name="loginMail" id="loginMail" aria-describedby="emailHelp" placeholder="הכנסת כתובת אימייל" />
+                    <input type="email" class="form-control fs-5" name="loginMail" id="loginMail" aria-describedby="emailHelp" placeholder="הכנס כתובת אימייל" />
                 </div>
             </div>
             <div class="mb-3 row">
