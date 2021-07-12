@@ -9,6 +9,10 @@
                     if (session_status() === PHP_SESSION_NONE) {
                         session_start();
                     }
+                    if(!isset($_SESSION["user_id"])){?>
+                        <a href="login.php" <?php if($pageName=="login.php"){echo 'class="active"';}?> >התחבר</a>
+                        <?php }
+                        else{
                     if(isset($_SESSION["user_type"]) && $_SESSION["user_type"] == "user"){
                 ?>
                 <a href="index.php" <?php if($pageName=="index.php"){echo 'class="active"';}?> >עמוד בית</a>
@@ -26,9 +30,8 @@
                 <a href="#">דו"חות</a>
                 <a href="#">הגדרות</a>
                 <a href="logout.php">התנתק</a>
-                <?php }if(!isset($_SESSION["user_type"])){?>
-                <a href="login.php" <?php if($pageName=="login.php"){echo 'class="active"';}?> >התחבר</a>
-                <?php
+                
+                <?php }
                 }?>
                 <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                     <i class="fa fa-bars"></i></a>
