@@ -11,7 +11,7 @@ window.onload = (event) => {
             $.each(cities, function() {
                 if(city == this.name){
                     $("#cities").append("<option selected>"+this.name+"</option>");
-                    continue;
+                    return;
                 }
             $("#cities").append("<option>"+this.name+"</option>");
         })  

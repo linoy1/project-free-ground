@@ -1,20 +1,21 @@
 
-[{
-    "name" : "Tel Aviv"
+[
+{
+    "name" : "הרצליה"
 },
 {
-    "name" : "Herzliya"
+    "name" : "חולון"
 },
 {
-    "name" : "Lod"
+    "name" : "לוד"
 },
 {
-    "name" : "Rishon Letzion"
+    "name" : "ראשון לציון"
 },
 {
-    "name" : "Holon"
+    "name" : "רמלה"
 },
 {
-    "name" : "Ramat Gan"
+    "name" : "תל אביב"
 }
 ]
