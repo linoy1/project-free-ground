@@ -21,14 +21,14 @@
     <div id="wrapper">
         <main>
             <h2 id="headline"> חיפוש מגרש </h2>
-            <section id="myBtnContainer">
+            <div id="myBtnContainer">
                 <!-- material-icons md-inactive md-28 -->
                 <button class="btn active bold" onclick="filterSelection('all')">הכל</button>
-                <button class="btn md-inactive material-icons md-28 " onclick="filterSelection('soccer')"> sports_soccer</button>
-                <button class="btn md-inactive material-icons md-28 " onclick="filterSelection('basketball')"> sports_basketball</button>
-                <button class="btn md-inactive material-icons md-28 " onclick="filterSelection('tennis')"> sports_tennis</button>
-                <button class="btn md-inactive material-icons md-28 " onclick="filterSelection('fitness')"> fitness_center</button>
-            </section>
+                <button class="btn md-inactive material-icons md-28 " onclick="filterSelection('soccer')">sports_soccer</button>
+                <button class="btn md-inactive material-icons md-28 " onclick="filterSelection('basketball')">sports_basketball</button>
+                <button class="btn md-inactive material-icons md-28 " onclick="filterSelection('tennis')">sports_tennis</button>
+                <button class="btn md-inactive material-icons md-28 " onclick="filterSelection('fitness')">fitness_center</button>
+            </div>
             <section class="groundsList">
 				<?php while($row = mysqli_fetch_assoc($result)){ ?>
 					<div class="filterDiv <?php if($row['football']){ echo 'soccer'; } if($row['basketball']){ echo 'basketball'; } if($row['tennis']){ echo 'tennis'; } if($row['gym']){ echo 'fitness'; } ?>">
