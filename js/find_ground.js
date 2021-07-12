@@ -1,6 +1,14 @@
-
-
-filterSelection("all")
+window.onload = (event) => {
+    filterSelection("all")
+    var btns = document.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", " md-inactive");
+        this.className = this.className.replace(" md-inactive", " active");
+      });
+    }
+}
 
 function filterSelection(c) {
     var x, i;
@@ -35,13 +43,4 @@ function RemoveClass(element, name) {
         }
     }
     element.className = arr1.join(" ");
-}
-
-var btns = document.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName(" active");
-    current[0].className = current[0].className.replace(" active", " md-inactive");
-    this.className = this.className.replace(" md-inactive", " active");
-  });
 }
