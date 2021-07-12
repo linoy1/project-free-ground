@@ -11,7 +11,6 @@
 
 <head>
     <?php include "includes/in_header.php"; ?>
-    <script src="includes/cities.js"></script>
     <script src="js/delete.js"></script>
 </head>
 <body>    

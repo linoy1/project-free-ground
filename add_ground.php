@@ -56,7 +56,7 @@
 
 <head>
     <?php include "includes/in_header.php"; ?>
-    <script src="includes/cities.js"></script>
+    <script src="js/cities.js"></script>
 </head>
 <body>    
         

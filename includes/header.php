@@ -2,36 +2,35 @@
         <a href="index.php" id="logo"></a>
     </header>
     
+    <script src="js/scripts.js"></script>
     <nav class="topnav" id="myTopnav">
-            <ul>
                 <?php
+                    $pageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);  
                     if (session_status() === PHP_SESSION_NONE) {
                         session_start();
                     }
                     if(isset($_SESSION["user_type"]) && $_SESSION["user_type"] == "user"){
                 ?>
-                <?php if(isset($_SESSION['user_id'])){?>
-                <li><a href="index.php">עמוד בית</a></li>
-                <li><a href="find_ground.php">חיפוש מגרש</a></li>
-                <li><a href="#">המגרשים שלי</a></li>
-                <li><a href="my_matches.php">המשחקים שלי</a></li>
-                <li><a href="#">הגדרות</a></li>
-                <li><a href="logout.php">התנתק</a></li>
-                <?php }else{?>
-                <li><a href="login.php">התחבר</a></li>
-                <?php
-                }
-                    }
+                <a href="index.php" <?php if($pageName=="index.php"){echo 'class="active"';}?> >עמוד בית</a>
+                <a href="find_ground.php" <?php if($pageName=="find_ground.php"){echo 'class="active"';}?>>חיפוש מגרש</a>
+                <a href="#">המגרשים שלי</a>
+                <a href="my_matches.php" <?php if($pageName=="my_matches.php"){echo 'class="active"';}?>>המשחקים שלי</a>
+                <a href="#">הגדרות</a>
+                <a href="logout.php">התנתק</a>
+                <?php }
                     if(isset($_SESSION["user_type"]) && $_SESSION["user_type"] == "admin")
                     {?>
-                <li><a href="index.php">עמוד בית</a></li>
-                <li><a href="manage_grounds.php">ניהול מגרשים</a></li>
-                <li><a href="#">ניהול משתמשים</a></li>
-                <li><a href="#">דו"חות</a></li>
-                <li><a href="#">הגדרות</a></li>
-                <li><a href="logout.php">התנתק</a></li>?>
-               <li> <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-                <i class="fa fa-bars"></i></a></li>
-                <?php }?>
-            </ul>
+                <a href="index.php" <?php if($pageName=="login.php"){echo 'class="active"';}?> >עמוד בית</a>
+                <a href="manage_grounds.php" <?php if($pageName=="manage_grounds.php"){echo 'class="active"';}?> >ניהול מגרשים</a>
+                <a href="#">ניהול משתמשים</a>
+                <a href="#">דו"חות</a>
+                <a href="#">הגדרות</a>
+                <a href="logout.php">התנתק</a>
+                <?php }if(!isset($_SESSION["user_type"])){?>
+                <a href="login.php" <?php if($pageName=="login.php"){echo 'class="active"';}?> >התחבר</a>
+                <?php
+                }?>
+                <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                    <i class="fa fa-bars"></i></a>
+            
         </nav>
