@@ -80,10 +80,6 @@ form .row {
     justify-content: center;
 }
 
-form .row {
-    justify-content: center;
-}
-
 
 /* ------------------ */
 
@@ -145,11 +141,8 @@ main {
     margin-bottom: 20px;
     margin-top: 20px;
     border: 5px solid #3a3f40;
-    <<<<<<< HEAD border-radius: 15px;
+    border-radius: 15px;
     padding: 10px;
-    =======border-radius: 15px;
-    padding: 10px;
-    >>>>>>>5182ab27aec5e449f84fc10980af4bcee29a29ab
 }
 
 #myBtnContainer {
@@ -235,6 +228,7 @@ main {
 }
 
 .groundsList h4 {
+    font-size: 25;
     float: right;
     margin-right: 5%;
     margin-top: 5%;
@@ -242,6 +236,7 @@ main {
 }
 
 .groundsList h6 {
+    font-size: 15;
     float: right;
     margin-right: 5%;
     margin-top: 5.8%;
@@ -327,12 +322,6 @@ i.fa {
     margin-top: 30px;
     margin-bottom: 10px;
     width: 200px;
-}
-
-.add-btn {
-    margin-right: 44%;
-    margin-left: 44%;
-    margin-top: 4%;
 }
 
 .add-btn {
