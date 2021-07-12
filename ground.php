@@ -1,111 +1,81 @@
 <?php 
     include "db.php";
     include "config.php";
+	$query  = "SELECT * FROM tbl_grounds_215 WHERE id =".$_GET['id'];
+    $result = mysqli_query($connection , $query);
+    $row    = mysqli_fetch_array($result); 
 ?>
 
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html dir="rtl" lang="he">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free-Ground</title>
-    <link rel="stylesheet" href="css/style.css" media="screen">
-    <script src="js/scripts.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<?php include "includes/in_header.php"; ?>
 </head>
 
 <body>
-    <header>
-        <a href="index.html"  id="logo"></a>
-        <h2>שלום:<label id="userName"></label> </h2>
-
-    </header>
-    <nav class="topnav" id="myTopnav">
-            <ul>
-                <li><a href="index.php">עמוד בית</a></li>
-                <li><a href="find_ground.php">חיפוש מגרש</a></li>
-                <li><a href="my_grounds.php">המגרשים שלי</a></li>
-                <li><a href="my_matches.php">המשחקים שלי</a></li>
-                <li><a href="settings.php">הגדרות</a></li>
-                <li><a href="#">התנתק</a></li>
-               <li> <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-                <i class="fa fa-bars"></i></a></li>
-            </ul>
-        </nav>
+   
+<?php include "includes/header.php"; ?>
 <div id="wrapper">
-        <main id="object_page">
+        <!-- <main id="object_page"> -->
 
-            <h2 id="headline"> אפקה-מגרש מרכזי</h2>
+            <h2 id="headline"> <?php echo $row['name'];?></h2>
+            <span id="ground_address"><?php echo $row['address'].', '.$row['city'];?></span>
             <span id="show-on-map">
-                
-                <a href="https://maps.google.com/?q="><!--address from json--><img src="images/Google_Maps_icon_(2015-2020).svg" id="map-img" alt="map-img"></a> 
-                </span>
-            <section class="rate_star">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-            </section>
-            <h1>לוח זמנים יומי</h1>
-            <!-- <?php
-            // $query  = "SELECT * FROM tbl_matches_215 order by matchDate desc";
-            $query = "SELECT * FROM tbl_matches_215 AS m
-                     WHERE  m.groundid =" . $_SESSION['groundid'];
-            $result = mysqli_query($connection, $query);
+                <a href="https://maps.google.com/?q=<?php echo $row['address'].', '.$row['city'];?>" target="_blank"><img src="images/Google_Maps_icon_(2015-2020).svg" id="map-img" alt="map-img"></a> 
+            </span>
+            <h3 id="schedule">לוח משחקים</h3>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>תאריך</th>
+                        <th>שעת התחלה</th>
+                        <th>שעת סיום</th>
+                        <th>משחק</th>
+                        <th>משתתפים</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        $name = $row['name'];
+                        $query = "SELECT startTime,endTime,sport,playersNum,date FROM tbl_matches_215 WHERE groundName ='$name' order by date,startTime ";
+                        $result = mysqli_query($connection, $query);
+                        if(!$result) { 
+                            echo " <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>";
 
-            if(!$result) { 
-                die("DB query failed.");
-            }
-            echo '<table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th>תאריך</th>
-                            <th>שעה</th>
-                            <th>מגרש</th>
-                            <th>משחק</th>
-                            <th>משתתפים</th>
-                            <th>הצטרף</th>
-                        </tr>
-                    </thead>'
-            // GET: get data again
-            while($row = mysqli_fetch_assoc($result)) { // Results are in an associative array. keys are cols names
-                // Output data from each row
-                echo " <tr>
-                        <td>". $row["startTime"] ."</td>
-                        <td>". $row["endTime"] ."</td>
-                        <td>". $row["ground"] ."</td>
-                        <td>". $row["sport"] ."</td>
-                        <td>". $row["numOfPlayers"] ."</td>
-                        <td>". $row["join"] ."</td>
-                    </tr>"
-            }
-            echo "</table>"
-            // Release returned data
-            mysqli_free_result($result);
-            
-            // Close DB connection
-            mysqli_close($connection);
-        ?>
-             -->
-        </main>
+                        }
+                        // GET: get data again
+                        while($row = mysqli_fetch_assoc($result)) { // Results are in an associative array. keys are cols names
+                            // Output data from each row
+                            $date = date_create($row["date"]);
+                            $startTime = date_create($row["startTime"]);
+                            $endTime = date_create($row["endTime"]);
+                            echo " <tr>
+                                    <td>". date_format($date,"d-m-Y")."</td>
+                                    <td>". date_format($startTime,"H:i") ."</td>
+                                    <td>". date_format($endTime,"H:i") ."</td>
+                                    <td>". $row["sport"] ."</td>
+                                    <td>". $row["playersNum"] ."</td>
+                                </tr>";
+                        }
+                        // Release returned data
+                        mysqli_free_result($result);
+                        
+                        // Close DB connection
+                        mysqli_close($connection);
+                    ?>
+                </tbody>
+        </table>
+        
+        <button type="button" class="btn btn-primary add-btn" onclick="location.href='add_match.php?groundId=<?php echo $_GET['id'];?>'">הוסף משחק</button>
+        <!-- </main> -->
     </div>
-
- <footer class="bg-light text-center ">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-
-            <div class="blackLine"></div>
-            <!-- Grid container -->
-            2021 ©
-            <a class="text-dark" href="#">Free-Ground.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-
-
+    <?php include "includes/footer.php"; ?>
 </body>
 </html>

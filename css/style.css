@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Secular One', sans-serif;
 }
 
 header,
@@ -13,15 +14,22 @@ section {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Secular One', sans-serif;
     /* color:#3a3f40; */
 }
 
 
 /* index.html */
 
+
+/* 
 #indexPage .topnav {
     height: 10px;
+} */
+
+.main_menu {
+    margin-top: 80px;
 }
 
 .main_menu a {
@@ -31,22 +39,27 @@ body {
     width: 200px;
     height: 200px;
     margin-left: 30px;
-    margin-top: 160px;
     background-color: #efefef;
     text-decoration: none;
     text-align: center;
     color: #000000;
+    border-radius: 45px;
 }
 
 .main_menu a:hover {
-    background-color: rgb(97, 94, 94);
+    background-color: rgb(194, 194, 194);
+    color: #000000;
 }
 
-.main_menu img {
+.main_menu a span {
     margin: 0 auto;
     margin-top: 50px;
     width: 80px;
     height: 80px;
+}
+
+#helloTxt {
+    margin: 0 auto;
 }
 
 header {
@@ -63,67 +76,15 @@ header {
     display: block;
 }
 
+form .row {
+    justify-content: center;
+}
+
 
 /* ------------------ */
 
-.example {
-    float: left;
-    width: 200px;
-}
-
-#add_ground_form.example input[type=text] {
-    padding: 10px;
-    width: 80%;
-    font-size: 15px;
-    border: 1px solid grey;
-    background: #f1f1f1;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-    margin-bottom: 20px;
-    height: 30px;
-}
-
-#add_ground_form.example button {
-    float: left;
-    width: 20%;
-    padding: 1px;
-    color: white;
-    background-color: #333;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    border: none;
-    margin-bottom: 20px;
-    height: 30px;
-}
-
-#add_ground_form.example button:hover {
-    background-color: #ddd;
-}
-
-#add_ground_form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-#add_ground_form,
-input,
-select {
-    width: 80%;
-    margin: auto;
-    margin-bottom: 30px;
-}
-
-#add_ground_form {
-    position: absolute;
-}
-
-
-/* ------------ */
-
 #wrapper {
     width: 1000px;
-    height: 100vh;
     margin: 0 auto;
 }
 
@@ -135,13 +96,7 @@ select {
     background-color: #333;
     width: 100%;
     text-align: center;
-	line-height: 50px;
-}
-.topnav ul{
-	margin-bottom: 0 !important;
-}
-.topnav ul li {
-    display: inline;
+    line-height: 50px;
 }
 
 .topnav a {
@@ -158,10 +113,12 @@ select {
     color: black;
 }
 
+
+/* 
 .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #3d3d3d;
     color: white;
-}
+} */
 
 .topnav .icon {
     display: none;
@@ -184,24 +141,13 @@ main {
     margin-bottom: 20px;
     margin-top: 20px;
     border: 5px solid #3a3f40;
-	border-radius: 15px;
-	padding: 10px;
-}
-
-#sort {
-    font-size: 26px;
-    margin-top: 20px;
-    margin-left: 410px;
-}
-
-#sort-value {
-    margin-right: 2%;
-    font-size: 20px;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 #myBtnContainer {
     margin-top: 20px;
-	text-align: center;
+    text-align: center;
 }
 
 .filterDiv {
@@ -226,11 +172,13 @@ main {
     padding: 12px 16px;
     background-color: #f1f1f1;
     cursor: pointer;
-	line-height: 44px !important;
+    line-height: 44px !important;
 }
+
 .bold {
-	font-weight:bold !important;
+    font-weight: bold !important;
 }
+
 
 /* Add a light grey background on mouse-over */
 
@@ -266,7 +214,7 @@ main {
     border-radius: 25px;
     font-size: 30px;
     width: 70%;
-	margin: 30px auto;
+    margin: 30px auto;
 }
 
 .groundsList a:hover {
@@ -283,7 +231,7 @@ main {
     float: right;
     margin-right: 5%;
     margin-top: 5%;
-	width: 190px;
+    width: 190px;
 }
 
 .groundsList h6 {
@@ -293,8 +241,8 @@ main {
 }
 
 .bg-light {
-    clear: both;
     position: relative;
+    clear: both;
     margin-top: 200px;
 }
 
@@ -333,14 +281,17 @@ i.fa {
     width: 100%;
 }
 
-#form {}
-
 #submit {
     width: 100%;
 }
 
 
-/* object */
+/* ground */
+
+#ground_address {
+    margin-right: 40%;
+    font-size: 20px;
+}
 
 #show-on-map button {
     background: #efefef;
@@ -362,21 +313,23 @@ i.fa {
     outline: none;
 }
 
-#dis {
-    /* text-align: center; */
-    margin-right: 1%;
-    font-size: 20px;
+#schedule {
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.add-btn {
+    margin-right: 44%;
+    margin-left: 44%;
+    margin-top: 4%;
 }
 
 #map-img {
-    width: 100%;
-    height: 35px;
-}
-
-.rate_star {
-    width: 100px;
-    margin: 0 auto;
-    margin-right: 44%;
+    height: 40px;
 }
 
 h1 {
@@ -386,23 +339,6 @@ h1 {
 
 .checked {
     color: orange;
-}
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-td,
-th {
-    border: 1px solid #efefef;
-    text-align: center;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #efefef;
 }
 
 .material-icons.md-18 {
@@ -441,7 +377,8 @@ tr:nth-child(even) {
     font-size: 48px;
 }
 
-.material-icons.md-inactive, .md-inactive {
+.material-icons.md-inactive,
+.md-inactive {
     color: rgba(0, 0, 0, 0.26) !important;
 }
 
@@ -503,13 +440,7 @@ tr:nth-child(even) {
         margin-bottom: 20px;
     }
     /* Navigation */
-    .topnav ul li {
-        list-style-type: none;
-    }
-    .topnav ul li a {
-        display: none;
-    }
-    .topnav ul li a:not(:first-child) {
+    .topnav a:not(:first-child) {
         display: none;
     }
     .topnav a.icon {
@@ -517,6 +448,9 @@ tr:nth-child(even) {
         display: block;
     }
     /* .topnav.responsive {position: relative;} */
+    .topnav.responsive {
+        position: relative;
+    }
     .topnav.responsive .icon {
         position: absolute;
         left: 0;
@@ -579,23 +513,23 @@ tr:nth-child(even) {
         margin-right: 38%;
         margin-bottom: 0;
     }
-    table {
+    /* table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
         margin: 0 auto;
-    }
-    td,
+    } */
+    /* td,
     th {
         border: 1px solid #dddddd;
-        text-align: center;
+        text-align: center !important;
         padding: 8px;
     }
     tr:nth-child(even) {
         background-color: #dddddd;
-    }
+    } */
     #match_form,
     input,
     select {

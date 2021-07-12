@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html dir="rtl" lang="he">
 
 <head>
     <meta charset="UTF-8">

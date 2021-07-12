@@ -3,11 +3,10 @@
     include "config.php";
 	$query  = "SELECT * FROM tbl_grounds_215";
     $result = mysqli_query($connection , $query);
-    $row    = mysqli_fetch_array($result); 
 ?>
 
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html dir="rtl" lang="he">
 
 <head>
 	<?php include "includes/in_header.php"; ?>
@@ -53,18 +52,7 @@
             </section>
         </main>
     </div>
-    <footer class="bg-light text-center ">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-
-            <div class="blackLine"></div>
-            <!-- Grid container -->
-            2021 ©
-            <a class="text-dark" href="#">Free-Ground.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-
+    <?php include "includes/footer.php"; ?>
 </body>
 
 </html>
